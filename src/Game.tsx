@@ -1,11 +1,12 @@
-import React from "react";
 import { FC } from "react";
+import { getRandomColors } from "./utils";
 
 interface GameProps {
   total: number;
 }
 
 const Game: FC<GameProps> = ({ total }) => {
-  return <div>{total}</div>;
+  const colors = getRandomColors(total / 2);
+  return <div>{colors.toString()}</div>;
 };
 export default Game;
