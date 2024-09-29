@@ -4,21 +4,22 @@
   padding: 2rem;
   text-align: center;
 }
+
 .container {
   width: 40vw;
   padding: 30px;
 }
 
 .boxes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
+  gap: 5px; /* Add some space between the boxes */
   width: 100%;
   border: 1px solid black;
 }
 
 .box {
-  width: 25%;
   border: 1px solid black;
-  aspect-ratio: 2/1;
+  aspect-ratio: 1 / 1; /* Make boxes square */
+  background-color: var(--box-color);
 }

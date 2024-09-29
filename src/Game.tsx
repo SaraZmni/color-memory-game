@@ -17,11 +17,13 @@ const Game: FC<GameProps> = ({ total }) => {
       return { id, bgColor: color };
     });
   }, [total]);
+
+  const handleClick = () => {};
   return (
     <div className="container">
       <div className="boxes">
         {boxes.map((box) => (
-          <Box key={box.id} {...box} />
+          <Box key={box.id} onClick={handleClick} {...box} />
         ))}
       </div>
     </div>
